@@ -276,29 +276,3 @@ p {
   .btn {
     padding: 0 2.5rem;
     font-size: 0.9375rem; } }
-
-.section {
-  padding: 5.3125rem 0;
-  background-color: #fff; }
-
-.section-presentation {
-  max-width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .section-presentation .section-presentation-title {
-    width: 200px;
-    text-align: center; }
-    .section-presentation .section-presentation-title:before {
-      content: "";
-      display: inline-block;
-      width: 100%;
-      height: auto;
-      border-right: 4px solid #f39c12; }
-  .section-presentation .section-presentation-text {
-    border: 1px solid green; }
