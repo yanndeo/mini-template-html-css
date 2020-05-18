@@ -14,7 +14,9 @@
 /* Valeur Par Default */
 :root h2 {
   font-size: 20px;
-  line-height: 1.25; }
+  line-height: 1.25;
+  padding: 0;
+  margin: 0; }
 
 body {
   margin: 0;
@@ -238,7 +240,8 @@ p {
       .header-menu-container .menu-default .menu-item:before {
         padding: 0 15px; }
     .header-menu-container .menu-burger,
-    .header-menu-container .menu-mobile {
+    .header-menu-container .menu-mobile,
+    .header-menu-container .menu-mobile-list {
       display: none; }
   .header-baseline .header-baseline-l1 {
     line-height: 60px; }
@@ -249,7 +252,7 @@ p {
   .header-baseline .header-baseline-l1 {
     font-size: 45px; }
   .header-baseline .header-baseline-l2 {
-    font-size: 60px; }
+    font-size: 55px; }
   .header-baseline .header-baseline-l3 {
     font-size: 40px; } }
 
@@ -273,3 +276,29 @@ p {
   .btn {
     padding: 0 2.5rem;
     font-size: 0.9375rem; } }
+
+.section {
+  padding: 5.3125rem 0;
+  background-color: #fff; }
+
+.section-presentation {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .section-presentation .section-presentation-title {
+    width: 200px;
+    text-align: center; }
+    .section-presentation .section-presentation-title:before {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      border-right: 4px solid #f39c12; }
+  .section-presentation .section-presentation-text {
+    border: 1px solid green; }

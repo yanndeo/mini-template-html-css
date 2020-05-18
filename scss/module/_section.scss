@@ -1,3 +1,28 @@
-.section-presentation{
-    
+.section{
+    padding: r(85px) 0;
+    background-color: #fff;
+}
+
+
+.section-presentation {
+    //display: inline-block;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    .section-presentation-title {
+        width: 200px;
+        text-align: center;
+        &:before{
+            content : "";
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            border-right: 4px solid $main-color;
+
+        }
+    }
+    .section-presentation-text {
+     @include border(1px, green);
+
+    }
 }

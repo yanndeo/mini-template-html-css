@@ -216,6 +216,9 @@
     padding-top: r(50px) ;  //
 }
 
+
+
+
 .header-menu-container {
     padding: 0 20px;//
     .header-logo {
@@ -233,8 +236,10 @@
             }
         }
     }
+
     .menu-burger,
-    .menu-mobile {
+    .menu-mobile,
+    .menu-mobile-list {
         display: none;
     } 
 }
@@ -263,7 +268,7 @@
         }
 
         .header-baseline-l2 {
-             font-size: 60px;
+             font-size: 55px ;//60px;
         }
 
         .header-baseline-l3 {
