@@ -339,7 +339,7 @@ p {
     position: relative; }
 
 .section-presentation {
-  margin-bottom: clamp(60px, 7vw, 140px);
+  margin-bottom: clamp(70px, 7vw, 140px);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
