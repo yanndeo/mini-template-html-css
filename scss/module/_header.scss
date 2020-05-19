@@ -46,11 +46,12 @@
 .header-baseline{
     @include horizontal-vertical-centering(50%, -50%);
     margin: auto;
+    max-width: 100%;
+    min-width: r(260px);
     z-index: 2;
     font-weight: 300;
     text-transform: uppercase;
-    max-width: 100%;
-    min-width: r(260px);
+    letter-spacing: -1px;
 }
 
 .header-baseline-l{
@@ -63,8 +64,8 @@
 }
 
 .header-baseline-l2{
-    font-size: 5vw ; //clamp(15px, 5vw, 60px);
     line-height: lh(80, 60); //80px
+    font-size: 5vw; //clamp(15px, 5vw, 60px);
     font-weight: bold;
     white-space: nowrap;
     //text-size-adjust: 32%;
@@ -220,7 +221,7 @@
 
 
 .header-menu-container {
-    padding: 0 20px;//
+     padding: 0;
     .header-logo {
         img {
             width: 77%;//

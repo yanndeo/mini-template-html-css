@@ -1,13 +1,28 @@
 .l-container{
-    max-width: 1170px;
+    //max-width: 1170px;
     margin: 0 auto;
     overflow: auto;
     //@include border(2px, green);
     //position: relative;
+    z-index: 5;
+    padding: 0 5px;
 
 }
 
 
-@media(min-width: 400px){
-    
+@media(min-width: 768px) {
+    .l-container{
+        padding: 0 20px;
+
+    }
+}
+
+
+
+
+@media (min-width: 1200px) {
+    .l-container {
+        max-width: 1170px;
+        width: 100%;
+    }
 }

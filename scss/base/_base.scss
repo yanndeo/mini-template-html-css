@@ -29,6 +29,15 @@
 }
 
 
+@mixin absolute-position(){
+     position: absolute;
+     top:0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+}
+
+
 
 
 /* Variables */
@@ -49,12 +58,32 @@ $transitionDefault : .3s;
 /* Valeur Par Default */
 :root {
     h2 {
-        font-size: 20px;
-        line-height: 1.25;
         padding: 0;
         margin: 0;
+        font-size:clamp(r(16px), 4vw, r(30px)); // r(30px);
+        line-height: lh(25, 30);
+        letter-spacing: 1.5px;
+        color: #0d0d0d;
     }
 
+    h3{
+        margin: 0;
+        padding: 0;
+        margin-bottom: r(25px);
+        font-size: r(20px);
+        line-height: 1.25;
+        font-weight: 700;
+        color: #0d0d0d;
+        text-transform: uppercase;
+    }
+
+    hr{
+        margin: 115px 0;
+        padding: 0;
+        height: 2px;
+        background-color: #e6e6e6;
+        border: none;
+    }
     
 }
 
@@ -79,11 +108,16 @@ a{
 p{
     padding: 0;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: r(20px);
+    line-height: 28px;
+
 }
 
 .cb{
     clear: both;
+}
+.important{
+    color: #e74c3c;
 }
 
 

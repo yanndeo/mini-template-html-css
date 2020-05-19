@@ -1,0 +1,68 @@
+
+.section-about{
+
+    .section-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column wrap;
+        .content-text {
+            width: 100%;
+            text-align: center;
+            .title{
+                margin-top: 25px;
+            }
+         
+        }
+
+        .content-image {
+            width: 100%;
+            text-align: center;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+/////////////////////// RESPONSIVE ///////////////////////
+
+
+@media only screen and (min-width: 992px) {
+
+.section-about {
+
+    .section-content {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-flow: row nowrap;
+        .content-text {
+            width: r(505px);
+            text-align: left;
+            .title{
+                margin-top: 0;
+            }
+
+        }
+
+        .content-image {
+            width: r(450px);
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+}
+
+
+
+
+
+
+
+
