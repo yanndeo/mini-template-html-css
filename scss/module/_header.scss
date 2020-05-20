@@ -9,7 +9,7 @@
         content: '';
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
-        @include backgroundColor(#34495e, .7);
+        @include backgroundColor(#595DFF, .4); // ;(#595DFF, .4); //(#555e34, .7); (#34495e, .7)
         z-index: 1;
     }
 }
