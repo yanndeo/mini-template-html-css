@@ -1,8 +1,8 @@
 .header{
     position: relative;
     height: r(600px);
-    background: url('/assets/images/bg-head.jpg') center top /cover no-repeat;
-    background-attachment: fixed;
+    background: url('/assets/images/bg-header.jpg') center top /cover no-repeat;
+   // background-attachment: fixed;
     color: #fff;
     text-align: center;
     &:before{
@@ -215,6 +215,9 @@
 .header{
     height: r(1165px);
     padding-top: r(50px) ;  //
+    background-attachment: fixed;
+
+    
 }
 
 

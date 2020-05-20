@@ -83,8 +83,7 @@ p {
 .header {
   position: relative;
   height: 37.5rem;
-  background: url("/assets/images/bg-head.jpg") center top/cover no-repeat;
-  background-attachment: fixed;
+  background: url("/assets/images/bg-header.jpg") center top/cover no-repeat;
   color: #fff;
   text-align: center; }
   .header:before {
@@ -263,7 +262,8 @@ p {
 @media only screen and (min-width: 705px) {
   .header {
     height: 72.8125rem;
-    padding-top: 3.125rem; }
+    padding-top: 3.125rem;
+    background-attachment: fixed; }
   .header-menu-container {
     padding: 0; }
     .header-menu-container .header-logo img {
@@ -339,7 +339,7 @@ p {
     position: relative; }
 
 .section-presentation {
-  margin-bottom: clamp(70px, 7vw, 140px);
+  margin-bottom: clamp(60px, 7vw, 140px);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -392,13 +392,14 @@ p {
     line-height: 110px;
     text-align: center;
     vertical-align: top; }
-  .icon-section:hover {
+  .icon-section:hover, .icon-section:focus {
     -webkit-transition: 0.3s;
     transition: 0.3s; }
-    .icon-section:hover:before {
+    .icon-section:hover:before, .icon-section:focus:before {
       background-color: transparent;
       color: #f39c12;
-      border: 2px solid #f39c12; }
+      border: 2px solid #f39c12;
+      cursor: pointer; }
 
 @media only screen and (min-width: 768px) {
   .section {
@@ -445,7 +446,8 @@ p {
     width: 100%;
     text-align: center; }
     .section-about .section-content .content-image img {
-      max-width: 100%; }
+      max-width: 100%;
+      height: auto; }
 
 @media only screen and (min-width: 992px) {
   .section-about .section-content {
