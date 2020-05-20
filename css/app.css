@@ -15,7 +15,7 @@
 :root h2 {
   padding: 0;
   margin: 0;
-  font-size: clamp(1rem, 4vw, 1.875rem);
+  font-size: clamp(1rem, 4vw, 1.5rem);
   line-height: 0.83333;
   letter-spacing: 1.5px;
   color: #0d0d0d; }
@@ -23,12 +23,16 @@
 :root h3 {
   margin: 0;
   padding: 0;
-  margin-bottom: 1.5625rem;
-  font-size: 1.25rem;
+  margin-bottom: 0.875rem;
+  font-size: 1.125rem;
   line-height: 1.25;
   font-weight: 700;
   color: #0d0d0d;
   text-transform: uppercase; }
+
+:root h5 {
+  margin: 0;
+  padding: 0; }
 
 :root hr {
   margin: 115px 0;
@@ -61,7 +65,8 @@ p {
   clear: both; }
 
 .important {
-  color: #e74c3c; }
+  color: #e74c3c;
+  line-height: 28px; }
 
 /* Layouts */
 .l-container {
@@ -311,11 +316,11 @@ p {
     padding: 0 2.5rem;
     font-size: 0.9375rem; } }
 
-.section {
+.section-x {
   padding: 2.8125rem 0;
   background-color: #fff;
   position: relative; }
-  .section:before, .section:after {
+  .section-x:before, .section-x:after {
     content: '';
     display: block;
     background-color: #fff;
@@ -331,11 +336,11 @@ p {
     -webkit-transform: skewY(-2deg);
         -ms-transform: skewY(-2deg);
             transform: skewY(-2deg); }
-  .section:after {
+  .section-x:after {
     -webkit-transform-origin: top right;
         -ms-transform-origin: top right;
             transform-origin: top right; }
-  .section .l-container {
+  .section-x .l-container {
     position: relative; }
 
 .section-presentation {
@@ -409,13 +414,14 @@ p {
     -webkit-box-direction: normal;
     -webkit-flex-flow: row nowrap;
         -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    padding-left: 32px; }
+            flex-flow: row nowrap; }
+    .section-presentation .section-presentation-title {
+      margin-top: -1.25rem; }
     .section-presentation .section-presentation-text {
-      padding: 0 20px;
-      margin-left: 20px;
+      padding: 0 1.25rem;
+      margin-left: 1.25rem;
       text-align: left;
-      border-left: 4px solid #f39c12; }
+      border-left: 0.25rem solid #f39c12; }
       .section-presentation .section-presentation-text:before {
         display: none; } }
 
@@ -441,7 +447,7 @@ p {
     width: 100%;
     text-align: center; }
     .section-about .section-content .content-text .title {
-      margin-top: 25px; }
+      margin-top: 1.5625rem; }
   .section-about .section-content .content-image {
     width: 100%;
     text-align: center; }
@@ -450,7 +456,6 @@ p {
       height: auto; }
   .section-about .section-content .content-custom-image {
     position: relative;
-    width: 450px;
     width: 100%;
     text-align: center;
     height: 354px;
@@ -458,7 +463,10 @@ p {
     background-size: contain;
     z-index: -1;
     -webkit-clip-path: none;
-            clip-path: none; }
+            clip-path: none;
+    max-height: -webkit-fill-available;
+    max-height: -moz-available;
+    max-height: fill-available; }
     .section-about .section-content .content-custom-image img {
       position: absolute;
       bottom: 0;
@@ -492,12 +500,12 @@ p {
       .section-about .section-content .content-text .title {
         margin-top: 0; }
     .section-about .section-content .content-image {
-      width: 28.125rem; }
+      width: 450px; }
     .section-about .section-content .content-custom-image {
       width: 450px;
       height: 254px;
-      -webkit-clip-path: polygon(25% -256px, 100% 0%, 99% 100%, 0% 100%);
-              clip-path: polygon(25% -256px, 100% 0%, 99% 100%, 0% 100%); }
+      -webkit-clip-path: polygon(25% -256px, 100% 0%, 100% 100%, 0% 100%);
+              clip-path: polygon(25% -256px, 100% 0%, 100% 100%, 0% 100%); }
       .section-about .section-content .content-custom-image img {
         left: 50%;
         right: 0;
@@ -505,3 +513,39 @@ p {
             -ms-transform: translate(-50%);
                 transform: translate(-50%);
         width: 100%; } }
+
+.section-skills .icon-section:before {
+  content: "\f080"; }
+
+.progress-bar {
+  margin-bottom: 1.875rem; }
+  .progress-bar:last-child {
+    margin-bottom: 0; }
+  .progress-bar .value {
+    color: #bfbfbf; }
+    .progress-bar .value:before {
+      content: "/";
+      display: inline-block;
+      padding: 0 8px; }
+
+.progress-bar-title {
+  display: inline-block;
+  line-height: 40px;
+  text-transform: uppercase; }
+
+.progress-bar-content {
+  height: 10px;
+  width: 100%;
+  max-width: 85%;
+  margin: 0 auto;
+  background-color: #e6e6e6;
+  position: relative; }
+  .progress-bar-content span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f39c12;
+    display: inline-block;
+    height: 100%; }

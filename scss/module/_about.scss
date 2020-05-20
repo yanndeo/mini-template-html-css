@@ -10,7 +10,7 @@
             width: 100%;
             text-align: center;
             .title{
-                margin-top: 25px;
+                margin-top: r(25px);
             }
         }
 
@@ -26,16 +26,15 @@
 
         .content-custom-image {
             position: relative;
-            width: 450px;
-            
+            //width: 450px;
             width: 100%;
             text-align: center;
             height: 354px;
             background: #7451eb;
             background-size: contain;
             z-index: -1;
-           // margin: 0 auto;
             clip-path: none;
+            max-height: fill-available;
             img {
                 position: absolute;
                 bottom: 0;
@@ -43,7 +42,6 @@
                 right: 0;
                 transform: translate(-50%);
                 width:460px;
-
                 max-width: 100%;
                 height: auto;
             }
@@ -75,13 +73,13 @@
         }
 
         .content-image {
-            width: r(450px);
+            width: 450px;
         }
 
         .content-custom-image {
             width: 450px;
             height: 254px;
-            clip-path: polygon(25% -256px, 100% 0%, 99% 100%, 0% 100%);
+            clip-path: polygon(25% -256px, 100% 0%, 100% 100%, 0% 100%);
             img {
                 left: 50%;
                 right: 0;

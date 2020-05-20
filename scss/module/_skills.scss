@@ -1,0 +1,23 @@
+.section-skills{
+
+    .icon-section{
+        &:before{
+           content: "\f080";
+        }
+    }
+
+    .section-content {
+        //flex-flow: column-reverse;
+        .content-text {
+            
+        }
+        .content-image{
+          //  width: 474px;
+        }
+
+       
+
+
+    
+    }
+}

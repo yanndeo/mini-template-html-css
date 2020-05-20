@@ -1,8 +1,7 @@
-.section {
+.section-x {
     padding: r(45px) 0; //r(85px) 0;
     background-color: #fff;
     position: relative;
-
     &:before,
     &:after {
         content: '';
@@ -47,7 +46,6 @@
         text-transform: uppercase;
         font-weight: 400;
         text-align: center;
-
         &::before {
             content: '';
             display: block;
@@ -109,14 +107,17 @@
     }
 
     .section-presentation {
-        flex-flow: row nowrap; //
-        padding-left: 32px;
+        flex-flow: row nowrap; 
+
+        .section-presentation-title{
+            margin-top: r(-20px);
+        }
 
         .section-presentation-text {
-            padding: 0 20px;
-            margin-left: 20px;
+            padding: 0 r(20px);
+            margin-left: r(20px);
             text-align: left;
-            border-left: 4px solid $main-color;
+            border-left: r(4px) solid $main-color;
             &:before {
                 display: none;
             }

@@ -60,7 +60,7 @@ $transitionDefault : .3s;
     h2 {
         padding: 0;
         margin: 0;
-        font-size:clamp(r(16px), 4vw, r(30px)); // r(30px);
+        font-size:clamp(r(16px), 4vw, r(24px)); // r(30px);
         line-height: lh(25, 30);
         letter-spacing: 1.5px;
         color: #0d0d0d;
@@ -69,12 +69,17 @@ $transitionDefault : .3s;
     h3{
         margin: 0;
         padding: 0;
-        margin-bottom: r(25px);
-        font-size: r(20px);
+        margin-bottom: r(14px);
+        font-size: r(18px);
         line-height: 1.25;
         font-weight: 700;
         color: #0d0d0d;
         text-transform: uppercase;
+    }
+
+    h5{
+        margin: 0;
+        padding: 0;
     }
 
     hr{
@@ -118,6 +123,7 @@ p{
 }
 .important{
     color: #e74c3c;
+    line-height: 28px;
 }
 
 
