@@ -1,9 +1,11 @@
+@charset "UTF-8";
+/* Tools */
+/*Functions & Mixins */
+/* Variables */
 /* Base */
 @import url(../node_modules/normalize.css/normalize.css);
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 @import url("/assets/fontawesome/css/all.min.css");
-/*Functions & Mixins */
-/* Variables */
 * {
   margin: 0;
   padding: 0;
@@ -60,6 +62,17 @@ p {
   margin: 0;
   margin-bottom: 1.25rem;
   line-height: 28px; }
+
+blockquote {
+  font-size: clamp(2.5rem, 3vw, 2.8125rem);
+  font-weight: bold;
+  line-height: 1.33333; }
+
+.cite {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold; }
 
 .cb {
   clear: both; }
@@ -176,7 +189,8 @@ p {
 /* -------------------------------------- */
 .menu-default {
   display: none;
-  font-weight: 600; }
+  font-weight: 600;
+  text-transform: uppercase; }
 
 .menu-item:hover {
   color: #000;
@@ -295,30 +309,8 @@ p {
   .header-baseline .header-baseline-l3 {
     font-size: 40px; } }
 
-.btn {
-  display: inline-block;
-  padding: 0 1.25rem;
-  font-size: 0.8125rem;
-  line-height: 2.66667;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #f39c12;
-  border: 1px solid #f39c12; }
-  .btn:hover, .btn:focus {
-    background-color: transparent;
-    color: #f39c12;
-    -webkit-transition: 0.3s;
-    transition: 0.3s; }
-
-@media only screen and (min-width: 600px) {
-  .btn {
-    padding: 0 2.5rem;
-    font-size: 0.9375rem; } }
-
 .section-x {
   padding: 2.8125rem 0;
-  background-color: #fff;
   position: relative; }
   .section-x:before, .section-x:after {
     content: '';
@@ -382,6 +374,68 @@ p {
       -webkit-transition: 0.3s;
       transition: 0.3s; }
 
+/* Section banner */
+.section-banner {
+  position: relative;
+  padding: 100px 0;
+  background: url("/assets/images/bg-head.jpg") top center/cover no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff; }
+  .section-banner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(89, 93, 255, 0.4);
+    z-index: 1; }
+  .section-banner .l-container {
+    position: relative; }
+
+@media only screen and (min-width: 768px) {
+  .section {
+    padding: 5.3125rem 0; }
+  .section-presentation {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap; }
+    .section-presentation .section-presentation-title {
+      margin-top: -1.25rem; }
+    .section-presentation .section-presentation-text {
+      padding: 0 1.25rem;
+      margin-left: 1.25rem;
+      text-align: left;
+      border-left: 0.25rem solid #f39c12; }
+      .section-presentation .section-presentation-text:before {
+        display: none; }
+  .section-banner {
+    padding: 200px 0; } }
+
+.btn {
+  display: inline-block;
+  padding: 0 1.25rem;
+  background-color: #f39c12;
+  font-size: 0.8125rem;
+  line-height: 2.66667;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #f39c12; }
+  .btn:hover, .btn:focus {
+    background-color: transparent;
+    color: #f39c12;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+
+@media only screen and (min-width: 600px) {
+  .btn {
+    padding: 0 2.5rem;
+    font-size: 0.9375rem; } }
+
 .icon-section {
   position: relative; }
   .icon-section:before {
@@ -406,24 +460,42 @@ p {
       border: 2px solid #f39c12;
       cursor: pointer; }
 
+.quote-text {
+  display: inline-block;
+  position: relative;
+  padding: 0 2.5rem; }
+  .quote-text:before, .quote-text:after {
+    width: 55px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3.875rem;
+    line-height: 0.96774; }
+  .quote-text:before {
+    content: '"'; }
+  .quote-text:after {
+    content: '"';
+    left: auto;
+    right: 0; }
+
+.quote-author {
+  display: block;
+  margin-top: 30px; }
+  .quote-author:before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: #f39c12;
+    margin: 0 auto; }
+
 @media only screen and (min-width: 768px) {
-  .section {
-    padding: 5.3125rem 0; }
-  .section-presentation {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: row nowrap;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap; }
-    .section-presentation .section-presentation-title {
-      margin-top: -1.25rem; }
-    .section-presentation .section-presentation-text {
-      padding: 0 1.25rem;
-      margin-left: 1.25rem;
-      text-align: left;
-      border-left: 0.25rem solid #f39c12; }
-      .section-presentation .section-presentation-text:before {
-        display: none; } }
+  .quote-text {
+    padding: 0 3.4375rem; }
+    .quote-text:before, .quote-text:after {
+      font-size: 6.875rem;
+      line-height: 0.54545; } }
 
 .section-about .section-content {
   display: -webkit-box;
@@ -495,14 +567,14 @@ p {
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap; }
     .section-about .section-content .content-text {
-      width: 31.5625rem;
+      width: 45%;
       text-align: left; }
       .section-about .section-content .content-text .title {
         margin-top: 0; }
     .section-about .section-content .content-image {
       width: 450px; }
     .section-about .section-content .content-custom-image {
-      width: 450px;
+      width: 40%;
       height: 254px;
       -webkit-clip-path: polygon(25% -256px, 100% 0%, 100% 100%, 0% 100%);
               clip-path: polygon(25% -256px, 100% 0%, 100% 100%, 0% 100%); }
@@ -514,8 +586,43 @@ p {
                 transform: translate(-50%);
         width: 100%; } }
 
-.section-skills .icon-section:before {
-  content: "\f080"; }
+.section-skills .icon-section {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
+  .section-skills .icon-section:before {
+    content: "\f080"; }
+
+.section-skills .section-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-flow: column-reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse; }
+  .section-skills .section-content .content-image {
+    max-width: 560px; }
+
+@media only screen and (min-width: 992px) {
+  .section-skills .icon-section {
+    -webkit-box-ordinal-group: unset;
+    -webkit-order: unset;
+        -ms-flex-order: unset;
+            order: unset; }
+    .section-skills .icon-section:before {
+      content: "\f080"; }
+  .section-skills .section-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
+    .section-skills .section-content .content-text {
+      width: 40%; }
+      .section-skills .section-content .content-text .progress-bar {
+        margin-bottom: 10px; }
+    .section-skills .section-content .content-image {
+      width: 45%; } }
 
 .progress-bar {
   margin-bottom: 1.875rem; }
@@ -534,18 +641,50 @@ p {
   text-transform: uppercase; }
 
 .progress-bar-content {
-  height: 10px;
   width: 100%;
   max-width: 85%;
   margin: 0 auto;
-  background-color: #e6e6e6;
-  position: relative; }
+  height: 10px;
+  position: relative;
+  background-color: #e6e6e6; }
   .progress-bar-content span {
+    display: inline-block;
+    height: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #f39c12;
-    display: inline-block;
-    height: 100%; }
+    background-color: #f39c12; }
+
+@media only screen and (min-width: 992px) {
+  .progress-bar-content {
+    margin: unset; } }
+
+/* Comment sont ecrites les règles
+
+.class {
+    Box :règles qui concernent la boîte, tailles, positionement
+    
+    Border : les bordures
+
+    background : les bacground color image
+
+    Text : les fonts et taille du text.
+
+    Other : le reste  ex: transformation css 
+}
+
+BEM
+.widget
+    .widget__title
+    .widget__body
+    .widget__XX
+
+
+.widget--green
+.widget--dark */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px 
+C'est a dire elle ne depasse pas 1280px
+@media screen and (max-width: 1280px)
+*/

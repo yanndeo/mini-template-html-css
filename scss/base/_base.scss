@@ -2,48 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 @import url("/assets/fontawesome/css/all.min.css");
 
-/*Functions & Mixins */
-@function r($size) {
-    $remSize: $size / 16px;
-    @return #{$remSize}rem;
-}
 
-@function lh($lh,$fz){
-    $valueLh: $lh / $fz;
-    @return $valueLh;
-}
-
-@mixin border($x, $color: #000, $type: solid ) {
- border: $x $type $color;
-}
-
-@mixin backgroundColor($color, $opacity){
-    background: rgba($color, $opacity);
-}
-
-@mixin horizontal-vertical-centering($left: 0, $x:50%, $y:-50%){
-    position: absolute;
-    top: 50%;
-    left: $left;
-    transform: translateX($x) translateY($y);
-}
-
-
-@mixin absolute-position(){
-     position: absolute;
-     top:0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-}
-
-
-
-
-/* Variables */
-$main-color: #f39c12; //#595DFF
-$fontFamily: 'Open Sans', sans-serif;
-$transitionDefault : .3s;
 
 * {
     margin: 0;
@@ -115,12 +74,33 @@ p{
     margin: 0;
     margin-bottom: r(20px);
     line-height: 28px;
-
 }
+
+
+
+blockquote{
+    font-size:clamp(r(40px), 3vw, r(45px));
+    font-weight: bold;
+    line-height: lh(60, 45);
+   
+}
+
+
+
+.cite{
+    font-size: r(24px);
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+}
+
+
 
 .cb{
     clear: both;
 }
+
+
 .important{
     color: #e74c3c;
     line-height: 28px;

@@ -1,0 +1,59 @@
+.quote-text {
+    display: inline-block;
+    position: relative;
+    padding: 0 r(40px);
+    &:before,
+    &:after {
+        width: 55px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: r(62px);
+        line-height: lh(60, 62);
+    }
+
+    &:before {
+        content: '"';
+    }
+
+    &:after {
+        content: '"';
+        left: auto;
+        right: 0;
+
+    }
+}
+
+.quote-author {
+    display: block;
+    margin-top: 30px;
+    &:before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 5px;
+        background-color: $main-color;
+        // text-align: center;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/////////////////////// RESPONSIVE ///////////////////////
+
+ @media only screen and (min-width: 768px) {
+
+    .quote-text{
+        padding: 0 r(55px);
+
+        &:before,
+        &:after {
+            font-size: r(110px);
+            line-height: lh(60, 110);
+
+        }
+    }
+ }

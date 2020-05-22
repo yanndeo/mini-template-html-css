@@ -1,12 +1,15 @@
 .btn{
     display: inline-block;
     padding: 0 r(20px);//
-    font-size: r(13px);//
+
+    background-color: $main-color;
+
+    font-size: r(13px); //
     line-height: lh(40, 15);
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
-    background-color: $main-color;
+    
     @include border(1px, $main-color);
     &:hover,&:focus{
         background-color: transparent;

@@ -1,0 +1,46 @@
+.icon-section {
+    position: relative;
+
+    &:before {
+        content: "\f0eb";
+        display: inline-block;
+        width: r(110px);
+        height: r(110px);
+
+        border: 2px solid $main-color;
+        border-radius: 50%;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 300;
+        font-size: r(36px);
+
+        line-height: 110px;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    &:hover,
+    &:focus {
+        transition: $transitionDefault;
+
+        &:before {
+            background-color: transparent;
+            color: $main-color;
+            @include border(2px, $main-color);
+            cursor: pointer;
+
+        }
+    }
+}
+
+
+
+/////////////////////// RESPONSIVE ///////////////////////
+
+
+@media only screen and (min-width: 992px) and (max-width: 1111px) {
+    .icon-section {
+       // margin-right: 8px;
+        
+    }
+
+}

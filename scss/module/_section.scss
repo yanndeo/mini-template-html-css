@@ -1,6 +1,6 @@
 .section-x {
     padding: r(45px) 0; //r(85px) 0;
-    background-color: #fff;
+   // background-color: #fff;
     position: relative;
     &:before,
     &:after {
@@ -30,8 +30,6 @@
     flex-flow: column wrap;
     padding: 0 r(16px); // 0 20px;
     max-width: 100%;
-
-
     .section-presentation-title {
         padding: 0; //11px 20px;//
         text-transform: uppercase;
@@ -63,35 +61,31 @@
 
 }
 
-.icon-section {
-    position: relative;
-    &:before {
-        content: "\f0eb";
-        display: inline-block;
-        width: r(110px);
-        height: r(110px);
-        
-        border: 2px solid $main-color;
-        border-radius: 50%;
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 300;
-        font-size: r(36px);
 
-        line-height: 110px;
-        text-align: center;
-        vertical-align: top;
+
+
+/* Section banner */
+
+.section-banner{
+    position: relative;
+    padding: 100px 0; 
+    background: url('/assets/images/bg-head.jpg') top center / cover no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    &:before{
+        content: "";
+        @include absolute-position();
+        @include background-color($second-color, .4);
+        z-index: 1;
     }
-    &:hover,&:focus {
-        transition: $transitionDefault;
-        &:before{
-            background-color: transparent;
-            color: $main-color;
-            @include border(2px , $main-color);
-            cursor: pointer;
-            
-        }
+
+    .l-container{
+        position: relative;
     }
+
 }
+
 
 
 
@@ -124,6 +118,11 @@
         }
 
 
+    }
+
+
+    .section-banner{
+        padding: 200px 0;
     }
 
 

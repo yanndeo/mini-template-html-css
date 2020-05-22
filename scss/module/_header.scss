@@ -2,14 +2,12 @@
     position: relative;
     height: r(600px);
     background: url('/assets/images/bg-header.jpg') center top /cover no-repeat;
-   // background-attachment: fixed;
     color: #fff;
     text-align: center;
     &:before{
         content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        @include backgroundColor(#595DFF, .4); // ;(#595DFF, .4); //(#555e34, .7); (#34495e, .7)
+        @include absolute-position();
+        @include background-color($second-color, .4); // ; //(#555e34, .7); (#34495e, .7)
         z-index: 1;
     }
 }
@@ -90,6 +88,7 @@
 .menu-default{
     display: none;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .menu-item{
@@ -136,7 +135,7 @@
 /* -------------------------------------- */
 .header-mobile {
     &:before {
-        @include backgroundColor($main-color, .82);
+        @include background-color($main-color, .82);
         z-index: 4;
     }
 

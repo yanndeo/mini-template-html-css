@@ -1,23 +1,56 @@
 .section-skills{
 
     .icon-section{
+        order: 1;
         &:before{
            content: "\f080";
         }
     }
 
     .section-content {
-        //flex-flow: column-reverse;
+        flex-flow: column-reverse;
         .content-text {
-            
         }
         .content-image{
-          //  width: 474px;
+           max-width: 560px;
         }
-
-       
-
-
-    
     }
 }
+
+
+
+/////////////////////// RESPONSIVE ///////////////////////
+
+
+@media only screen and (min-width: 992px) {
+
+    .section-skills {
+
+        .icon-section {
+            order: unset;
+            &:before {
+                content: "\f080";
+            }
+        }
+
+        .section-content {
+            flex-flow: row wrap;
+            .content-text {
+                width: 40%;
+                .progress{
+                    &-bar{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .content-image {
+                width: 45%;
+                //height: auto;
+
+            }
+        }
+    }
+}
+
+
