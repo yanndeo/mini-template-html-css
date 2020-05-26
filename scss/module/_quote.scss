@@ -27,14 +27,13 @@
 
 .quote-author {
     display: block;
-    margin-top: 30px;
+    margin-top: r(30px);
     &:before {
         content: '';
         display: block;
-        width: 50px;
-        height: 5px;
+        width: r(50px);
+        height: r(5px);
         background-color: $main-color;
-        // text-align: center;
         margin: 0 auto;
     }
 }
@@ -48,7 +47,6 @@
 
     .quote-text{
         padding: 0 r(55px);
-
         &:before,
         &:after {
             font-size: r(110px);

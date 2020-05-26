@@ -64,11 +64,11 @@ p {
   line-height: 28px; }
 
 blockquote {
-  font-size: clamp(2.5rem, 3vw, 2.8125rem);
+  font-size: clamp(1.875rem, 3vw, 2.8125rem);
   font-weight: bold;
   line-height: 1.33333; }
 
-.cite {
+cite {
   font-size: 1.5rem;
   text-transform: uppercase;
   font-style: normal;
@@ -80,6 +80,10 @@ blockquote {
 .important {
   color: #e74c3c;
   line-height: 28px; }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
 
 /* Layouts */
 .l-container {
@@ -460,6 +464,65 @@ blockquote {
       border: 2px solid #f39c12;
       cursor: pointer; }
 
+.stat-icon {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 2px solid;
+  border-radius: 100%;
+  border-color: #f39c12;
+  text-align: center;
+  line-height: 150px;
+  font-size: 2.25rem;
+  margin-bottom: 30px; }
+  .stat-icon:hover, .stat-icon:focus {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-color: #fff;
+    color: #f39c12; }
+    .stat-icon:hover:before, .stat-icon:focus:before {
+      background-color: transparent;
+      color: #f39c12;
+      border: 2px solid #f39c12;
+      cursor: pointer; }
+
+.progress-bar {
+  margin-bottom: 1.875rem; }
+  .progress-bar:last-child {
+    margin-bottom: 0; }
+  .progress-bar .value {
+    color: #bfbfbf; }
+    .progress-bar .value:before {
+      content: "/";
+      display: inline-block;
+      padding: 0 8px; }
+
+.progress-bar-title {
+  display: inline-block;
+  line-height: 40px;
+  text-transform: uppercase; }
+
+.progress-bar-content {
+  width: 100%;
+  max-width: 85%;
+  margin: 0 auto;
+  height: 10px;
+  position: relative;
+  background-color: #e6e6e6; }
+  .progress-bar-content span {
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f39c12; }
+
+@media only screen and (min-width: 992px) {
+  .progress-bar-content {
+    margin: unset; } }
+
 .quote-text {
   display: inline-block;
   position: relative;
@@ -481,12 +544,12 @@ blockquote {
 
 .quote-author {
   display: block;
-  margin-top: 30px; }
+  margin-top: 1.875rem; }
   .quote-author:before {
     content: '';
     display: block;
-    width: 50px;
-    height: 5px;
+    width: 3.125rem;
+    height: 0.3125rem;
     background-color: #f39c12;
     margin: 0 auto; }
 
@@ -496,6 +559,44 @@ blockquote {
     .quote-text:before, .quote-text:after {
       font-size: 6.875rem;
       line-height: 0.54545; } }
+
+.twitter,
+.facebook,
+.dribble,
+.google-plus,
+.linkedin {
+  color: #999999; }
+  .twitter:hover,
+  .facebook:hover,
+  .dribble:hover,
+  .google-plus:hover,
+  .linkedin:hover {
+    color: #f39c12; }
+  .twitter:before,
+  .facebook:before,
+  .dribble:before,
+  .google-plus:before,
+  .linkedin:before {
+    content: "\f0d5";
+    display: inline-block;
+    padding: 6px;
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    font-size: .9rem;
+    vertical-align: middle;
+    font-style: normal; }
+
+.twitter::before {
+  content: '\f099'; }
+
+.facebook::before {
+  content: '\f39e'; }
+
+.dribble::before {
+  content: '\f17d'; }
+
+.linkedin::before {
+  content: '\f0e1'; }
 
 .section-about .section-content {
   display: -webkit-box;
@@ -624,42 +725,105 @@ blockquote {
     .section-skills .section-content .content-image {
       width: 45%; } }
 
-.progress-bar {
-  margin-bottom: 1.875rem; }
-  .progress-bar:last-child {
-    margin-bottom: 0; }
-  .progress-bar .value {
-    color: #bfbfbf; }
-    .progress-bar .value:before {
-      content: "/";
-      display: inline-block;
-      padding: 0 8px; }
+.section-team-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
 
-.progress-bar-title {
-  display: inline-block;
-  line-height: 40px;
-  text-transform: uppercase; }
+.card-team {
+  max-width: 100%;
+  padding: 27px;
+  border: 1px solid transparent;
+  border-top: 4px solid transparent; }
+  .card-team:hover {
+    border: 1px solid #e8e8e8;
+    border-top: 4px solid #f39c12;
+    -webkit-transition: .7s;
+    transition: .7s;
+    background: #f0f0f0; }
+    .card-team:hover .card-title:after {
+      background-color: #f39c12; }
+  .card-team .card-image {
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #e8e8e8;
+    text-align: center; }
+    .card-team .card-image img {
+      width: 626px;
+      object-fit: fill; }
+  .card-team .card-title {
+    margin-bottom: 16px;
+    padding-top: 26px;
+    cursor: pointer; }
+    .card-team .card-title .name {
+      font-size: 1.125rem;
+      font-weight: bold;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #0d0d0d; }
+    .card-team .card-title .fonction {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.25;
+      text-transform: capitalize; }
+    .card-team .card-title:after {
+      content: "";
+      display: block;
+      margin: 8px auto;
+      width: 1.5625rem;
+      height: 5px;
+      background-color: #cccccc; }
+  .card-team .card-footer {
+    text-align: center; }
 
-.progress-bar-content {
-  width: 100%;
-  max-width: 85%;
-  margin: 0 auto;
-  height: 10px;
-  position: relative;
-  background-color: #e6e6e6; }
-  .progress-bar-content span {
-    display: inline-block;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #f39c12; }
+@media only screen and (min-width: 576px) {
+  .card-team {
+    width: 50%; } }
 
 @media only screen and (min-width: 992px) {
-  .progress-bar-content {
-    margin: unset; } }
+  .card-team {
+    width: 25%; } }
+
+.stat {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 33px; }
+
+.stat-description .numbers {
+  text-transform: uppercase; }
+
+.stat-description .label {
+  font-weight: 600;
+  text-transform: capitalize; }
 
 /* Comment sont ecrites les règles
 

@@ -1,6 +1,5 @@
 .icon-section {
     position: relative;
-
     &:before {
         content: "\f0eb";
         display: inline-block;
@@ -34,13 +33,42 @@
 
 
 
+
+
+.stat-icon {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 2px solid ;
+    border-radius: 100%;
+    border-color: $main-color;
+    text-align: center;
+    line-height: 150px;
+    font-size: r(36px);
+    margin-bottom: 30px;
+    &:hover,
+    &:focus {
+        transition: $transitionDefault;
+        border-color: #fff;
+        color: $main-color;
+        &:before {
+            background-color: transparent;
+            color: $main-color;
+            @include border(2px, $main-color);
+            cursor: pointer;
+
+        }
+    }
+}
+
+
+
 /////////////////////// RESPONSIVE ///////////////////////
 
 
 @media only screen and (min-width: 992px) and (max-width: 1111px) {
     .icon-section {
        // margin-right: 8px;
-        
     }
 
 }

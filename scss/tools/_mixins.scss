@@ -31,3 +31,11 @@
     right: 0;
     bottom: 0;
 }
+
+
+@mixin rounded-item($w, $h) {
+     width: $w;
+     height: $h;
+     border-radius: 50%;
+
+}

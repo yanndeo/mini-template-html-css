@@ -1,0 +1,94 @@
+.section-team-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+
+.card-team{
+    max-width: 100%;
+    padding: 27px;
+    border: 1px solid transparent;
+    border-top: 4px solid transparent;
+    &:hover{
+        border: 1px solid #e8e8e8;
+        border-top: 4px solid $main-color;
+        transition: .7s;
+        background: #f0f0f0;
+        .card-title {
+            &:after {
+              background-color: $main-color;
+            }
+        }
+    }
+
+    .card-image{
+        @include rounded-item(185px, 185px);
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid#e8e8e8;
+        text-align: center;
+        img{
+            width: 626px;
+           object-fit: fill;
+        }
+    }
+
+
+    .card-title{
+        margin-bottom: 16px;
+        padding-top: 26px;
+        cursor: pointer;
+        .name{
+            font-size: r(18px);
+            font-weight: bold;
+            line-height: lh(20, 20);
+            text-transform: uppercase;
+            color: #0d0d0d;
+        }
+        .fonction {
+            font-size: r(16px);
+            font-weight: 400;
+            line-height: lh(20, 16);
+            text-transform: capitalize;
+        }
+
+        &:after{
+            content: "";
+            display: block;
+            margin: 8px auto;
+            width: r(25px);
+            height: 5px;
+            background-color: #cccccc
+        }
+    }
+
+
+    .card-footer{
+        text-align: center;
+    }
+}
+
+
+
+
+
+/////////////////////// RESPONSIVE ///////////////////////
+
+
+@media only screen and (min-width: 576px) {
+    .card-team {
+        width: 50%;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .card-team {
+        width: 25%;
+    }
+
+}
