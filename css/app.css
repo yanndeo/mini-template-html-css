@@ -197,7 +197,7 @@ cite {
   text-transform: uppercase; }
 
 .menu-item:hover {
-  color: #000;
+  color: #f39c12;
   -webkit-transition: 0.3s;
   transition: 0.3s; }
 
@@ -230,6 +230,8 @@ cite {
 
 .menu-mobile {
   display: none; }
+  .menu-mobile .menu-item:hover {
+    color: #000; }
 
 /* ------HEADER & MENU MOBILE ------------ */
 /* -------------------------------------- */
@@ -464,23 +466,24 @@ cite {
       border: 2px solid #f39c12;
       cursor: pointer; }
 
-.stat-icon {
+.icon-custom {
   position: relative;
+  display: inline-block;
   width: 150px;
   height: 150px;
-  border: 2px solid;
+  border: 2px solid transparent;
   border-radius: 100%;
   border-color: #f39c12;
   text-align: center;
   line-height: 150px;
   font-size: 2.25rem;
   margin-bottom: 30px; }
-  .stat-icon:hover, .stat-icon:focus {
+  .icon-custom:hover, .icon-custom:focus {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     border-color: #fff;
     color: #f39c12; }
-    .stat-icon:hover:before, .stat-icon:focus:before {
+    .icon-custom:hover:before, .icon-custom:focus:before {
       background-color: transparent;
       color: #f39c12;
       border: 2px solid #f39c12;
@@ -814,9 +817,20 @@ cite {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   font-weight: 800;
-  font-size: 25px;
-  line-height: 33px; }
+  font-size: 1.5625rem;
+  line-height: 1.32;
+  text-align: center; }
+
+.stat-project {
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.25rem; }
 
 .stat-description .numbers {
   text-transform: uppercase; }
@@ -824,6 +838,15 @@ cite {
 .stat-description .label {
   font-weight: 600;
   text-transform: capitalize; }
+
+@media only screen and (min-width: 576px) {
+  .stat-project {
+    width: 50%; } }
+
+@media only screen and (min-width: 992px) {
+  .stat-project {
+    width: 25%;
+    margin: 0; } }
 
 /* Comment sont ecrites les règles
 

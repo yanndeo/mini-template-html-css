@@ -93,7 +93,7 @@
 
 .menu-item{
     &:hover{
-        color: #000;
+        color: $main-color;
         transition: $transitionDefault;
     }
     &:first-child{
@@ -128,6 +128,11 @@
 
 .menu-mobile {
     display: none;
+    .menu-item {
+        &:hover {
+            color: #000;
+        }
+    }
 }
 
 

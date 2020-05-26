@@ -35,11 +35,12 @@
 
 
 
-.stat-icon {
+.icon-custom {
     position: relative;
+    display: inline-block;
     width: 150px;
     height: 150px;
-    border: 2px solid ;
+    @include border(2px, transparent);
     border-radius: 100%;
     border-color: $main-color;
     text-align: center;
