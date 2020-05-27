@@ -1,0 +1,82 @@
+.offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .service {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+ .offer-plan-table {
+     //display: block;
+     //width: r(751px);
+     width: 100%;
+     .plan,
+     .price {
+         display: block;
+         text-align: center;
+         text-transform: uppercase;
+         font-size: r(20px);
+         line-height: lh(33, 22);
+     }
+
+     .price {
+         font-size: r(18px);
+         &:before {
+             content: " ";
+             display: block;
+             width: r(50px);
+             height: r(3px);
+             margin: r(3px) auto;
+             background-color: $main-color;
+         }
+     }
+
+ }
+
+
+ .plan-gold {
+     background-color: $main-color;
+     color: #fff;
+     .price {
+         &:before {
+             background-color: #fff;
+         }
+
+     }
+ }
+
+
+
+
+
+/////////////////////// RESPONSIVE ///////////////////////
+
+
+@media only screen and (min-width: 992px) {
+
+    .offer {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        .service {
+            width: 28%; // r(300px);
+            text-align: left;
+        }
+    }
+
+
+    .offer-plan-table {
+        display: block;
+        width: 59%;
+        //width: 71%; //r(751px);
+    }
+
+
+}

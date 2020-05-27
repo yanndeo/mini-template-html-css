@@ -1,0 +1,57 @@
+.services{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+
+  
+}
+
+ 
+
+.service{
+    width: 100%;
+     .icon-custom {
+         width: 100px;
+         height: 100px;
+         line-height: r(100px);
+         font-size: r(28px);
+         &:hover {
+             background-color: $main-color;
+             color: #fff;
+         }
+     }
+}
+
+
+.service-name{
+    text-transform: uppercase;
+    font-size: r(20px);
+    font-weight: 700;
+    line-height: lh(25, 20);
+}
+
+
+.service-description{
+    margin-top: r(8px);
+    font-size: r(16px);
+    line-height: (28, 16);
+}
+
+
+
+
+
+/////////////////////// RESPONSIVE ///////////////////////
+
+
+@media only screen and (min-width: 576px) {
+    .service{
+        width:33%;
+
+    }
+}
+
+
+
