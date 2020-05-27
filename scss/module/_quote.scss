@@ -21,7 +21,6 @@
         content: '"';
         left: auto;
         right: 0;
-
     }
 }
 
@@ -39,7 +38,36 @@
 }
 
 
+.banner-quote-secondary{
+    .quote-text {
+        font-size: r(22px);
+        font-weight: 400;
+        line-height: lh(30, 22);
+        font-style: italic;
+        text-align: center;
+           &:before,
+           &:after {
+               display: none;
+           }
+    }
 
+    .quote-author {
+        margin-top: 0;
+        margin-bottom: 30px;
+        &:before{
+            display: none;
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: r(50px);
+            height: r(5px);
+            background-color: $main-color;
+            margin: 0 auto;
+        }
+    }
+
+}
 
 /////////////////////// RESPONSIVE ///////////////////////
 

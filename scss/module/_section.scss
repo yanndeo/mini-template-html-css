@@ -80,6 +80,20 @@
         z-index: 1;
     }
 
+    .card{
+        padding-bottom: 0;
+        &:hover{
+             border: 1px solid transparent;
+             border-top: 4px solid transparent;
+             transition: .7s;
+             background: transparent;
+        }
+        .card-image {
+            @include rounded-item(111px, 111px);
+            cursor: pointer;
+        }
+    }
+
     .l-container{
         position: relative;
     }
