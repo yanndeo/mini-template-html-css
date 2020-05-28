@@ -102,6 +102,8 @@ cite {
     width: 100%; } }
 
 /* Modules */
+/* ---------------- HEADER SECTION ---------- */
+/* -------------------------------------- */
 .header {
   position: relative;
   height: 37.5rem;
@@ -315,6 +317,8 @@ cite {
   .header-baseline .header-baseline-l3 {
     font-size: 40px; } }
 
+/* ---------------- SECTIONS  ---------- */
+/* -------------------------------------- */
 .section-x {
   padding: 2.8125rem 0;
   position: relative; }
@@ -434,6 +438,8 @@ cite {
   .section-banner {
     padding: 200px 0; } }
 
+/* ---------------- BUTTONS ---------- */
+/* -------------------------------------- */
 .btn, .btn-inverse {
   display: inline-block;
   padding: 0 1.25rem;
@@ -463,6 +469,8 @@ cite {
     padding: 0 2.5rem;
     font-size: 0.9375rem; } }
 
+/* ---------------- BULLE ---------- */
+/* -------------------------------------- */
 .icon-section {
   position: relative; }
   .icon-section:before {
@@ -510,6 +518,8 @@ cite {
       border: 2px solid #f39c12;
       cursor: pointer; }
 
+/* ---------------- PROGRESS BAR ---------- */
+/* -------------------------------------- */
 .progress-bar {
   margin-bottom: 1.875rem; }
   .progress-bar:last-child {
@@ -547,6 +557,8 @@ cite {
   .progress-bar-content {
     margin: unset; } }
 
+/* ---------------- QUOTE ---------- */
+/* -------------------------------------- */
 .quote-text {
   display: inline-block;
   position: relative;
@@ -606,6 +618,8 @@ cite {
       font-size: 6.875rem;
       line-height: 0.54545; } }
 
+/* ---------------- SOCIAL NETWORK ---------- */
+/* -------------------------------------- */
 .twitter,
 .facebook,
 .dribble,
@@ -644,6 +658,8 @@ cite {
 .linkedin::before {
   content: '\f0e1'; }
 
+/* ---------------- TABLE ---------- */
+/* -------------------------------------- */
 table {
   border-collapse: collapse;
   width: 100%; }
@@ -713,6 +729,8 @@ tbody, tfoot {
       font-weight: bold;
       text-transform: uppercase; } }
 
+/* ---------------- ABOUT SECTION ---------- */
+/* -------------------------------------- */
 .section-about .section-content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -802,6 +820,8 @@ tbody, tfoot {
                 transform: translate(-50%);
         width: 100%; } }
 
+/* ---------------- SKILLS SECTION ---------- */
+/* -------------------------------------- */
 .section-skills .icon-section {
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
@@ -840,6 +860,8 @@ tbody, tfoot {
     .section-skills .section-content .content-image {
       width: 45%; } }
 
+/* ---------------- TEAM SECTION ---------- */
+/* ------------------------------- */
 .section-team-content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -951,6 +973,8 @@ tbody, tfoot {
   font-weight: 600;
   text-transform: capitalize; }
 
+/* ---------------- STATS SECTION ---------- */
+/* -------------------------------------- */
 @media only screen and (min-width: 576px) {
   .stat-project {
     width: 50%; } }
@@ -960,6 +984,8 @@ tbody, tfoot {
     width: 25%;
     margin: 0; } }
 
+/* ---------------- SERVICES SECTION ---------- */
+/* -------------------------------------- */
 .services {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1004,6 +1030,8 @@ tbody, tfoot {
   .service {
     width: 33%; } }
 
+/* ---------------- OFFER SECTION ---------- */
+/* -------------------------------------- */
 .offer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1075,6 +1103,56 @@ tbody, tfoot {
   .offer-plan-table {
     display: block;
     width: 59%; } }
+
+/* ---------------- PORTFOLIO ---------- */
+/* -------------------------------------- */
+.navigation-category .menu-item:before {
+  content: "//"; }
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto; }
+
+.project {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  border: 1px solid #f9f9f9;
+  text-align: center;
+  cursor: pointer; }
+
+.project-description {
+  padding: 0.75rem; }
+  .project-description .title,
+  .project-description .category {
+    display: block;
+    line-height: 1.46667; }
+  .project-description .title {
+    text-transform: uppercase;
+    font-size: 0.875rem; }
+    .project-description .title:hover {
+      color: #f39c12; }
+  .project-description .category {
+    color: #8c8c8c;
+    font-size: 0.75rem; }
+
+@media only screen and (min-width: 768px) {
+  /* .row{
+        flex-direction: row;
+    }
+     .project {
+         width: 26%;
+     } */ }
 
 /* Comment sont ecrites les règles
 
