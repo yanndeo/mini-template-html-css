@@ -1,18 +1,15 @@
-
 /* ---------------- PORTFOLIO ---------- */
 /* -------------------------------------- */
-.section-portfolio-content{
-
-}
+.section-portfolio-content {}
 
 
 
-.navigation-category{
+.navigation-category {
 
     .menu-item {
         &:before {
             content: "//";
-           // color: #f00;
+            // color: #f00;
         }
     }
 }
@@ -24,11 +21,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    //flex-flow: column wrap;
+    flex-flow: column wrap;
     margin: 0 auto;
 }
 
-.project{
+.project {
     width: 100%;
     margin-bottom: r(20px);
     @include border(1px, #f9f9f9);
@@ -37,8 +34,9 @@
 }
 
 
-.project-description{
+.project-description {
     padding: r(12px);
+
     .title,
     .category {
         display: block;
@@ -48,12 +46,13 @@
     .title {
         text-transform: uppercase;
         font-size: r(14px);
-        &:hover{
+
+        &:hover {
             color: $main-color;
         }
     }
 
-    .category{
+    .category {
         color: #8c8c8c;
         font-size: r(12px);
     }
@@ -63,18 +62,27 @@
 /////////////////////// RESPONSIVE ///////////////////////
 
 
-@media only screen and (min-width: 576px) {
-   
-}
+@media only screen and (min-width: 576px) {}
 
 
 @media only screen and (min-width: 768px) {
 
-    /* .row{
-        flex-direction: row;
+    .row {
+        flex-flow: row wrap;
     }
-     .project {
-         width: 26%;
-     } */
+
+
+    .project {
+        width: 50%;
+    }
+
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    .project {
+        width: 25%;
+    }
 
 }

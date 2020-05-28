@@ -1122,6 +1122,11 @@ tbody, tfoot {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   margin: 0 auto; }
 
 .project {
@@ -1147,12 +1152,18 @@ tbody, tfoot {
     font-size: 0.75rem; }
 
 @media only screen and (min-width: 768px) {
-  /* .row{
-        flex-direction: row;
-    }
-     .project {
-         width: 26%;
-     } */ }
+  .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
+  .project {
+    width: 50%; } }
+
+@media only screen and (min-width: 992px) {
+  .project {
+    width: 25%; } }
 
 /* Comment sont ecrites les règles
 
