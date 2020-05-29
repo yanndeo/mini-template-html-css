@@ -24,12 +24,12 @@
 
 
 
-@mixin absolute-position() {
+@mixin absolute-position($t:0, $l:0, $b:0, $r:0) {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: $t;
+    left: $l;
+    bottom: $b;
+    right: $r;
 }
 
 

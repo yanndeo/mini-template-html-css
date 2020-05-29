@@ -19,9 +19,6 @@
 
 
 
-
-
-
 .header-menu-container {
     position: relative;
     z-index: 5;//2
@@ -30,7 +27,6 @@
     align-items: center;
     text-align: left; 
     padding: r(10px); //
-    
 }
 
 
@@ -97,6 +93,9 @@
 }
 
 .menu-item{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: lh(25, 14);
     &:hover{
         color: $main-color;
         transition: $transitionDefault;
@@ -107,7 +106,7 @@
         }
     }
     &:before{
-        content: "//";
+        content: "\\\\";
         display: inline-block;
         padding: 0 r(37px);
         cursor: default;
