@@ -92,27 +92,21 @@
 
 /////////////////////// RESPONSIVE ///////////////////////
 
-
-
-
 @media only screen and (min-width: 615px) {
     .row {
         flex-flow: row wrap;
     }
-
     .project {
         width: 25%;
     }
-
-
 }
 
 
 
 
 @media only screen and (min-width: 768px) {
-   
     .navigation-category {
+
         .menu-item {
             &:before {
                 padding: 1rem;
