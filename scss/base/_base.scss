@@ -82,7 +82,6 @@ blockquote{
     font-size:clamp(r(30px), 3vw, r(45px));
     font-weight: bold;
     line-height: lh(60, 45);
-   
 }
 
 
@@ -104,6 +103,10 @@ cite{
 .important{
     color: #e74c3c;
     line-height: 28px;
+}
+
+.is-active{
+    color: $main-color;
 }
 
 .img-fluid{

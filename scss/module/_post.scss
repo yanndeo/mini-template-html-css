@@ -1,0 +1,219 @@
+
+.post{
+    width: 100%;
+    //height: 550px;
+    position: relative;
+}
+
+.post-thumbnail{
+    position: relative;
+    width: 100%;
+    height: auto;
+    line-height: 0;//delete space with his box content
+    cursor: pointer;
+    
+    
+}
+
+.post-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.post-icon{
+    display: none;
+}
+
+
+.post-meta {
+    display: none;
+}
+
+
+.post-content{
+    width: 100%; //
+    background-color: #fff;
+    text-align:center; //
+   
+    .post-title{
+       text-transform: uppercase;
+       font-size: r(12px);
+       line-height: lh(25, 12);
+    }
+
+    .post-excerpt{
+        display: none;
+        
+    } 
+
+    .btn-inverse,
+    .btn{
+       display: none;
+    }
+}
+
+
+
+
+
+/////////////////////// RESPONSIVE ///////////////////////
+
+@media only screen and (min-width: 350px) {
+
+    .post-thumbnail {
+       // height: 280px;
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: r(46px);
+            @include absolute-position();
+            @include background-color(#000, .66);
+            z-index: 1;
+            cursor: default;
+        }
+    }
+
+    .post-description {
+        align-items: flex-start;
+    }
+
+    .post-icon {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        cursor: pointer;
+        .icon {
+            display: inline-block;
+            width: r(46px);
+            height: r(46px);
+            line-height: r(46px);
+            font-size: r(22px);
+            text-align: center;
+            background-color: $main-color;
+            color: #fff;
+        }
+    }
+
+    .post-meta {
+        display: inline-block;
+        padding-top: r(20px);
+        position: absolute;
+        top: 0; //
+        right: 0; //
+        font-size: r(14px);
+        text-transform: capitalize;
+        white-space: nowrap;
+        z-index: 2;
+        span {
+            display: inline-block;
+            padding-right: r(10px);
+            transform: translateY(-50%);
+            line-height: 20px;
+            color: #fff;
+        }
+
+        .author,
+        .comments {
+            cursor: pointer;
+        }
+    }
+
+    .post-content {
+       // width: 100%; //
+       // padding: r(30px) r(20px); //
+       // background-color: #fff;
+       // text-align: center; //
+       // transform: translateY(-30px);
+        //box-shadow: 1px -13px 8px -11px rgb(177, 174, 174);
+       // 
+
+        .post-title {
+            font-size: r(15px);
+            line-height: lh(25, 15);
+        }
+
+        .post-excerpt {
+            padding-top: r(10px);
+            font-size: r(16px);
+            line-height: lh(28, 16);
+            font-weight: 400;
+        }
+    }
+
+    
+
+}
+
+@media only screen and (min-width: 528px) {
+    .post {
+       width: r(522px);
+   }
+
+   .post-thumbnail {
+       width: 100%;
+       //height: 300px;
+       height: auto;
+       &::after{
+           display: none;
+       }
+   }
+
+   .post-description {
+       flex-direction: row;
+   }
+
+   .post-icon{
+       left: 66px;
+       top: unset;
+   }
+
+   .post-meta {
+       left: 0;
+       top: unset; //
+       right: unset; //
+       span {
+           display: block;
+           padding-bottom: r(4px);
+           transform: unset;
+           color: #7f7f7f;
+       }
+   }
+
+
+   .post-content {
+       width: r(410px);
+       margin-left: auto;
+       padding: r(30px) r(11px) 0;
+       transform: translateY(-60px);
+       box-shadow: none;
+       text-align: left;
+       word-spacing: r(-2px);
+       z-index: 3;
+
+       .post-title {
+           font-size: r(18px);
+           line-height: lh(25, 18);
+        }
+
+        .post-excerpt {
+            display: block;
+           font-size: r(16px);
+           line-height: lh(28, 16);
+        }
+
+        .btn-inverse,
+        .btn {
+            display: inline-block !important;
+        }
+   } 
+
+   
+}

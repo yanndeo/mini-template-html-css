@@ -1,0 +1,40 @@
+
+.post-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.post{
+    width: r(522px);
+    margin-bottom: r(30px);
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+
+/////////////////////// RESPONSIVE ///////////////////////
+
+@media only screen and (min-width: 886px) {
+    .post-list {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+    .post {
+        width: 410px;
+    }
+}
+
+
+@media only screen and (min-width: 1100px) {
+
+    .post {
+        width: r(522px);
+    }
+}
+

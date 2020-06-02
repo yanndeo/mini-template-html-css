@@ -98,6 +98,38 @@
         }
     }
 
+
+    .icon-custom{
+        width: 100px;
+        height: 100px;
+        line-height: 6.25rem;
+        font-size: 1.75rem;
+        @include border(1px , #fff);
+         i {
+             color: $main-color;
+         }
+        &:hover{
+            @include border(1px, $main-color);
+            i{
+                 color: #fff;
+            }
+        }
+       
+    }
+
+    .text{
+        margin: 0;
+        font-size: 22px;
+        line-height: lh(33, 22);
+    }
+
+    .details{
+        margin-top: 6px;
+        font-size: 15px;
+        color: whitesmoke;
+    
+    }
+
     .l-container{
         position: relative;
     }

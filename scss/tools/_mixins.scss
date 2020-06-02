@@ -8,7 +8,7 @@
 
 
 @mixin background-color($color, $opacity) {
-    background: rgba($color, $opacity);
+    background: rgba($color, $opacity)!important;
 }
 
 
