@@ -88,6 +88,9 @@ cite {
   max-width: 100%;
   height: auto; }
 
+ul {
+  list-style: none; }
+
 /* Layouts */
 .l-container {
   margin: 0 auto;
@@ -923,6 +926,23 @@ tbody, tfoot {
     .post-content .btn {
       display: inline-block !important; } }
 
+.input-form {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  border: 2px solid #d9d9d9;
+  border-radius: 0;
+  background-color: transparent;
+  outline: none;
+  line-height: 10px; }
+  .input-form:focus {
+    border-color: #f39c12; }
+  .input-form:hover {
+    color: #f39c12; }
+
+.input-submit-btn {
+  padding: 7px; }
+
 /* ---------------- ABOUT SECTION ---------- */
 /* -------------------------------------- */
 .section-about .section-content {
@@ -1440,6 +1460,66 @@ tbody, tfoot {
 @media only screen and (min-width: 1100px) {
   .post {
     width: 32.625rem; } }
+
+.section-contact-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.contact-form, .contact-info {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 40px; }
+
+.contact-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: -1px !important;
+  margin-bottom: 33px !important; }
+
+.addresses li {
+  padding-bottom: 11px;
+  font-size: 1rem;
+  line-height: 2; }
+  .addresses li:before {
+    content: "";
+    display: inline-block;
+    margin-right: 0.625rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+    line-height: 20;
+    font-size: 1rem;
+    border: 1px solid #f39c12; }
+
+@media only screen and (min-width: 768px) {
+  .section-contact-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .contact-form,
+  .contact-info {
+    width: 47%; } }
 
 /* Comment sont ecrites les règles
 
