@@ -1,25 +1,64 @@
 
-.input-form{
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 10px 30px;
+.input-group{
+    margin-bottom: r(20px);
     border: 2px solid #d9d9d9;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include transition-duration(.7s);
+     &:focus {
+        border-color: $main-color;
+        .icon {
+            color: $main-color;
+        }
+    }
+
+      &:hover {
+        border-color: $main-color;
+        .icon {
+            color: $main-color;
+        }
+    }
+}
+
+
+.input-field{
+    width: 100%;
+    padding: r(10px) r(30px);
     border-radius: 0;
+    border: none;
     background-color: transparent;
     outline: none;
-    line-height: 10px;
-    &:focus{
-        border-color: $main-color;
-    }
-
-    &:hover{
-        color: $main-color
-    }
+    appearance: none;
+    line-height: r(10px);
+    color: #000;
 }
 
+.input-icon{
+    display: inline-block;
+    padding-right: r(30px);
+    .icon {
+        font-size: 13px;
+        &:hover{
+            color: $main-color;
+        }
+    }
+}
 
 .input-submit-btn{
-    padding: 7px ;
+    width: 100%;
+    padding:0 r(40px) ;
+    border-radius: 0;
 }
 
 
+
+/* ////////////// RESPONSIVE ////////////////// */
+@media only screen and (min-width: 410px) {
+   
+    .input-submit-btn {
+        width: unset;
+   
+    }
+
+}

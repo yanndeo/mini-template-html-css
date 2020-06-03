@@ -39,3 +39,8 @@
      border-radius: 50%;
 
 }
+
+
+@mixin transition-duration($value:.3s){
+    transition: $value;
+}

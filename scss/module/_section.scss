@@ -38,7 +38,6 @@
         padding: 0; //11px 20px;//
         text-transform: uppercase;
         text-align: center;
-
     }
 
     .section-presentation-text {
@@ -57,8 +56,6 @@
             margin-bottom: 15px;
             border-bottom: 4px solid $main-color;
             transition: $transitionDefault;
-
-        
         }
     }
 
@@ -134,6 +131,25 @@
         position: relative;
     }
 
+}
+
+.section-maps{
+     position: relative;
+     //padding: 100px 0;
+     //background: url('/assets/images/bg-head.jpg') top center / cover no-repeat;
+     background-attachment: fixed;
+     text-align: center;
+     color: #fff;
+     &:before {
+         content: "";
+         @include absolute-position();
+        // @include background-color($second-color, .4);
+         z-index: 1;
+     }
+}
+
+#mapid {
+    height: 180px;
 }
 
 

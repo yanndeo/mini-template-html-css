@@ -29,37 +29,61 @@
         padding-bottom: 11px;
         font-size: r(16px);
         line-height: lh(32,16);
-        //position: relative;
-       // white-space: nowrap;
-        &:before {
-            content: "";
-            display: inline-block;
-            margin-right: r(10px);
-            @include rounded-item(20px, 20px);
-            vertical-align: middle;
-            line-height: 20;
-            font-size: 1rem;
-            border: 1px solid $main-color;
-           // position: absolute;
-           // left: -40px;
-        }
+       &.phone, &.location, &.email{
+            &:before {
+                content: "\f3c5";
+                display: inline-block;
+                margin-right: r(20px);
+                @include rounded-item(33px, 33px);
+                @include border(2px, $main-color);
+                line-height: 33px;
+                text-align: center;
+                vertical-align: middle;
+                font-size: .8rem;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-style: normal;
+            }
+
+            &:hover {
+                &:before{
+                    background-color:$main-color;
+                    @include transition-duration(.7s);
+                    color: #fff;
+                }
+            }
+       }
+
+       &.phone{
+           &:before{
+               content: "\f879"
+           }
+       }
+
+       &.email {
+           &:before {
+               content: "\f0e0"
+           }
+       }
+       
     }
 }
 
 
 
 
+
+
+
+/* ////////////// RESPONSIVE ////////////////// */
 @media only screen and (min-width: 768px) {
    .section-contact-content {
        flex-direction: row;
    }
 
-
    .contact-form,
    .contact-info {
-       width: 47%;
+       width: 46%;
    }
 
-
-   
 }
